@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{{ site.title }}</title>
+    <link href="/template/css/style.css?t=1" rel="stylesheet" type="text/css" />
+    <link href="/template/css/text.css?t=2" rel="stylesheet" type="text/css" />
+    <link href="/template/css/cerabox.css" rel="stylesheet" type="text/css" />
+    <link href="/template/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/template/js/main.js?t=2"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="option">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Weibo</a></li>
+            <li><a href="#">About me</a> </li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">File</a></li>
+        </ul>   
+    </nav><!--导航条-->
+    <div class="banner">
+      <h1>
+        <span>{ </span>
+        <a href="/">{{ site.title }}</a>
+        <span> }</span>
+      </h1>
+      <h3>冬{{ site.subtitle }}
+      </h3>
+    </div><!--头图-->
+  </header><!--页头结束-->
+ {% set posts = get_data(type='post', limit=1, tags=tags) %}
+  <div class="main">  
+    {% block content %} 
+    {% endblock %}   
+    <div class="turning">
+      {% if paginator.has_pre %}
+      <div class="pre-button">
+          <a href="{{ paginator.pre_page_url }}">
+            <i class="icon-caret-left icon-1x"></i>
+            <span class="pre-page">上一页</span>
+          </a>
+      </div>
+      {% endif %}
+      {% if paginator.has_next %}
+      <div class="next-button">
+          <a href="{{ paginator.next_url}}">
+            <i class="icon-caret-right icon-1x"></i>
+            <span class="next-page">下一页</span>
+          </a>
+      </div>
+      {% endif %}
+    </div>
+  </div><!--内容-->
+  <footer>
+  </footer>
+</div>

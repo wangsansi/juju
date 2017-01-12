@@ -1,0 +1,169 @@
+.main{
+  margin: 0 auto;
+  width: 55%;
+  background-color: white;
+}
+.article{
+    overflow: hidden;
+    margin: 0px 45px;
+    min-height: 350px;
+    background: url(../img/main-lace.png) bottom repeat-x;
+}
+.article .left-part{
+  display:inline-block;
+  width: 25%;
+}
+.article .right-part{
+  float:right;
+  display:inline-block;
+  width: 75%;
+}
+.article .title{
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+.article .content{
+  padding-bottom: 30px;
+}
+.article .content .img-area img{
+  width: 100%;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+.article .content .img-area img:hover{
+  opacity: 0.9; 
+  color: #fff; 
+  background: rgba(0,0,0,0.8); 
+  transition-duration:.4s;
+}
+.tag a{
+    font-size: 12px;  
+}
+.tag li{
+    display: inline-block;
+    margin-top: 40px;
+    margin-right: 10px;
+    bottom: 20px;
+    
+}
+.label a{
+    padding: 5px 10px;
+    background-color: #828d95;
+    border-radius: 15px;
+    color: white;
+    transition-duration: .4s;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.label a:hover{
+    padding: 5px 10px;
+    background-color: #4d4d4d;
+    border-radius: 15px;
+    color: white;
+}
+.comment li{
+    margin: 15px 0px;
+    margin-right: 20px;
+}
+.comment a{
+    color: #828d95;
+}
+.comment a:hover{
+    color: #4d4d4d;
+}
+
+.article .date{
+  margin-top: 60px;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+.date .day{
+    width: 70px;
+    height: 70px;
+    border: 3px solid rgba(153, 153, 153, 0.2);
+    border-radius: 50%;
+    font-size: 30px;
+    line-height: 75px;
+    text-align: center;
+    color: #999;
+}
+.date .month{
+    width: 76px;
+    font-size: 15px;
+    text-align: center;
+    color: #999;
+}
+.turning{
+  height: 100px;
+}
+.pre-button, .next-button{
+  display: inline-block;
+  margin: 0px 20px;
+}
+.next-button{
+  float: right;
+  position: relative;
+}
+.pre-button i, .next-button i{
+  color: white;
+  font-size: 40px;
+  position: relative;
+}
+.pre-button i{
+  top: 2px;
+  left: 12px;
+}
+.next-button i{
+  top: 2px;
+  float: right;
+  right: 12px;
+}
+.pre-button a, .next-button a{
+  display: block;
+  height: 44px;
+  width: 44px;
+  border-radius: 22px;
+  margin: 20px;
+  background-color: #828d95;
+  transition-duration: .6s;
+}
+
+.pre-button a:hover{
+  height: 44px;
+  width: 120px;
+  border-radius:22px;
+  background-color: #828d95;
+}
+.next-button a:hover{
+  height: 44px;
+  width: 120px;
+  border-radius:22px;
+  background-color: #828d95;
+}
+.pre-page{
+    display: block;
+    width: 60px;
+    font-size: 17px;
+    color: white;
+    position: relative;
+    left: 45px;
+    bottom: 27px;
+}
+.next-page{
+    display: block;
+    width: 60px;
+    font-size: 17px;
+    color: white;
+    position: absolute;
+    right: 58px;
+    bottom: 34px;
+}
+
+
