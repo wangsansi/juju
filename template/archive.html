@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+{% set posts = get_data(type='post', limit=20, sort='desc') %} 
+{% if request.args.use == 'tags' %}
+    {% set entries = posts.group('tags') %}
+{% else %}
+    {% set entries = posts.group( '-date:year') %}
+<ul class="archive">
+    {% for year, posts in entries %}
+        <li>{{ year }}</li>
+        <ul class="archive-article">
+        {% for post in posts %}
+            <li>
+              <a class="archive-posts" href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              {% set tags = post.metadata.tags %}
+              {% if tags %}
+                {% for tag_name, tag_count in site.tags %} 
+              <a class="archive-tags" href="/tags/{{ tag_name }}">#{{ tag_name }}</a>
+                 {% endfor %} 
+              {% endif %} 
+              <span>{{ post.date.format('%Y-%m-%d') }}</span>
+            </li> 
+        {% endfor %}
+        </ul>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %} 

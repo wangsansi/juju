@@ -1,0 +1,39 @@
+.archive{
+	padding: 0px 45px 60px 45px;
+}
+.archive > li{
+	font-size: 30px;
+	margin-bottom: 30px;
+	margin-top:10px;
+}
+.archive-article{
+	margin: 0 20px;
+}
+.archive-article span{
+	float: right;
+}
+.archive-article li{
+	padding-bottom: 20px;
+	font-size: 16px;
+}
+.archive-posts {
+	padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition:0.5s;
+}
+.archive-posts:hover{
+	padding-bottom: 4px;
+	color: #222223;
+    border-bottom: 2px solid #555555;
+    transition:.5s;
+}
+.archive-tags{
+	color: white;
+    font-size: 13px;
+    padding: 1px;
+    background-color: rgba(79, 154, 230, 0.90);
+}
+.archive-tags:hover{
+	color: white;
+    background-color: rgb(170, 163, 232);
+};

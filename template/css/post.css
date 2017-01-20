@@ -1,3 +1,82 @@
-#detail{
+#detail {
     padding: 30px;
+}
+
+.post-main {
+    margin: 0 auto;
+    width: 55%;
+    background-color: white;
+}
+
+.post-option {
+    overflow: hidden;
+    width: 55%;
+    margin: 0 auto;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.post-container {
+    padding: 45px 45px 0 45px;
+}
+
+.post-container h1 {
+    font: bold 25px/1.1 "Microsoft Yahei";
+    color: #555;
+    text-align: left;
+}
+
+.post-container .date {
+    padding: 0;
+    margin: 9px 0 25px;
+    color: #999;
+    text-align: left;
+    display: block;
+    text-indent: 0.15em;
+}
+
+.detail p {
+    font-size: 15px;
+    margin: 0 0 1.234em;
+}
+
+.pre-one,
+.next-one {
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+    background: #828d95;
+    border-radius: 50%;
+    margin: 50px 0 50px 0;
+}
+
+.next-one {
+    float: right;
+}
+
+span a {
+    display: block;
+}
+
+span:hover {
+    background: #4d4d4d;
+}
+
+.pre-one i {
+    line-height: 44px;
+    font-size: 40px;
+    padding-left: 12px;
+    color: white;
+}
+
+.next-one i {
+    line-height: 44px;
+    font-size: 40px;
+    padding-left: 17px;
+    color: white;
+}
+
+#fb_comments_container {
+    padding-bottom: 50px;
+    margin: 0 auto;
+    width: 87%;
 }

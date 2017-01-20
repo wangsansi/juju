@@ -72,6 +72,33 @@ nav ul li a:hover{
     background-size: 100%;
     background-position: 50% 30%;
 }
+.one {
+   background-position: 50% 11%;
+}
+.two {
+  background-position: 50% 22%;
+}
+.three {
+  background-position: 50% 32%;
+}
+.four {
+  background-position: 50% 43%;
+}
+.five {
+  background-position: 50% 54%;
+}
+.six {
+  background-position: 50% 64%;
+}
+.seven {
+  background-position: 50% 75%;
+}
+.eight {
+  background-position: 50% 86%;
+}
+.nine {
+  background-position: 50% 96%;
+}
 
 .banner h1 {
   text-align: center;

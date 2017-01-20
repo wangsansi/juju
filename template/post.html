@@ -4,27 +4,33 @@
 	    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	    <title>{{post.title}}</title>
 	    <link rel="stylesheet" href="http://resource.farbox.com/css/basic.css?version=1361111187">
-	    <link href="/template/css/style.css?t=1" rel="stylesheet" type="text/css" />
-        <link href="/template/css/text.css?t=2" rel="stylesheet" type="text/css" />
-        <link href="/template/css/post.css?t=3" rel="stylesheet" type="text/css" />
+	    <link href="/template/css/base.css" rel="stylesheet" type="text/css" />
+        <link href="/template/css/text.css" rel="stylesheet" type="text/css" />
+        <link href="/template/css/post.css" rel="stylesheet" type="text/css" />
+        <link href="/template/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
-		<nav class="option">
+		<nav class="post-option">
 			<ul>
-	            <li><a href="#">Home</a></li>
-	            <li><a href="#">Weibo</a></li>
-	            <li><a href="#">About me</a> </li>
-	            <li><a href="#">Calendar</a></li>
-	            <li><a href="#">File</a></li>
+	            <li><a href="/">Home</a></li>
+	            <li><a href="/archive">Archive</a></li>
 	        </ul>  			
 		</nav>
-		<div class="main">
-			<h1>{{ post.title }}</h1>
-			<div id="detail">
-			    {{ post.content }}
+		<div class="post-main">
+			<div class="post-container">
+				<h1>{{ post.title }}</h1>
+				<p class="date">{{ post.date.format('%B %d,%Y') }}</p>
+				<div class="detail">
+				    <p>{{ post.content }}</p>
+				</div>
+				{% if pre_one %}
+				<span class="pre-one"><a href="{{ pre_one.url }}"><i class="icon-caret-left icon-1x"></i></a></span>
+				{% endif %}
+				{% if next_one %}
+				<span class="next-one"><a href="{{ next_one.url }}"><i class="icon-caret-right icon-1x"></i></a></span>
+				{% endif %}
 			</div>
-			{% include 'include/comments.html' %}
-			{% include 'include/ga.html' %}
+			{% include 'include/shisi_duoshuo.html' %}
 		</div>
 	</body>
 		
