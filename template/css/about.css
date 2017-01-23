@@ -31,3 +31,19 @@
     border-bottom: 2px solid #555555;
     transition: .5s;
 }
+@media only screen and (max-device-width: 736px){
+  .container p {
+    line-height: 72px;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .container a {
+    font-size: 72px;
+    padding-top: 10px;
+    color: rgb(117, 0, 9);
+  }
+  .container span {
+    font-size: 48px;
+    color: rgb(117, 0, 9);
+  }
+}

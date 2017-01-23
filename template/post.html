@@ -5,30 +5,42 @@
 	    <title>{{post.title}}</title>
 	    <link rel="stylesheet" href="http://resource.farbox.com/css/basic.css?version=1361111187">
 	    <link href="/template/css/base.css" rel="stylesheet" type="text/css" />
-        <link href="/template/css/text.css" rel="stylesheet" type="text/css" />
-        <link href="/template/css/post.css" rel="stylesheet" type="text/css" />
+        <link href="/template/css/index.css" rel="stylesheet" type="text/css" />
+        <link href="/template/css/post.css?t=1" rel="stylesheet" type="text/css" />
         <link href="/template/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/template/js/post.js?t=2"></script>
 	</head>
 	<body>
-		<nav class="post-option">
+		<nav class="option">
 			<ul>
-	            <li><a href="/">Home</a></li>
-	            <li><a href="/archive">Archive</a></li>
+	            <li><a href="/">首页</a></li>
+	            <li><a href="/about">关于</a></li>
+	            <li><a href="/archive">归档</a></li>
 	        </ul>  			
 		</nav>
+		
 		<div class="post-main">
+			{% set cover = post.metadata.cover %}
+	        {% if cover %}
+	         <div class="post-cover">   
+	            <img src="{{ cover }}" width="100%" title="author: {{post.metadata.cover_author}}" /> 
+	         </div>
+	        {% endif %}
 			<div class="post-container">
 				<h1>{{ post.title }}</h1>
 				<p class="date">{{ post.date.format('%B %d,%Y') }}</p>
 				<div class="detail">
 				    <p>{{ post.content }}</p>
+				    {% if pre_one %}
+					<span class="pre-one"><a href="{{ pre_one.url }}"><i class="icon-caret-left icon-1x"></i></a></span>
+					<span class="media-pre-one"><a href="{{ pre_one.url }}">上一篇</a></span>
+					{% endif %}
+					{% if next_one %}
+					<span class="next-one"><a href="{{ next_one.url }}"><i class="icon-caret-right icon-1x"></i></a></span>
+					<span class="media-next-one"><a href="{{ next_one.url }}">下一篇</a></span>
+					{% endif %}
 				</div>
-				{% if pre_one %}
-				<span class="pre-one"><a href="{{ pre_one.url }}"><i class="icon-caret-left icon-1x"></i></a></span>
-				{% endif %}
-				{% if next_one %}
-				<span class="next-one"><a href="{{ next_one.url }}"><i class="icon-caret-right icon-1x"></i></a></span>
-				{% endif %}
 			</div>
 			{% include 'include/shisi_duoshuo.html' %}
 		</div>

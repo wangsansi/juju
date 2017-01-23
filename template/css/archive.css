@@ -36,4 +36,25 @@
 .archive-tags:hover{
 	color: white;
     background-color: rgb(170, 163, 232);
-};
+}
+@media only screen and (max-device-width: 736px){
+	.archive > li{
+		text-align: center;
+		font-size: 78px;
+		padding-bottom: 80px;
+		padding-top:40px;
+    }
+    .archive-article li{
+		padding-bottom: 20px;
+		margin-bottom: 30px;
+		font-size: 46px;
+		border-bottom: 2px solid #f1f1f1;
+	}
+	.archive-tags {
+		display: none;
+	}
+	.archive-article span {
+		display: none;
+	}
+
+}

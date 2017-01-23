@@ -7,9 +7,8 @@
     <title>{{ site.title }}</title>
     <link href="/template/css/base.css?t=2" rel="stylesheet" type="text/css" />
     <link href="/template/css/index.css?t=1" rel="stylesheet" type="text/css" />
-    <link href="/template/css/cerabox.css" rel="stylesheet" type="text/css" />
-    <link href="/template/css/archive.css" rel="stylesheet" type="text/css" />
-    <link href="/template/css/about.css" rel="stylesheet" type="text/css" />
+    <link href="/template/css/archive.css?t=2" rel="stylesheet" type="text/css" />
+    <link href="/template/css/about.css?t=1" rel="stylesheet" type="text/css" />
     <link href="/template/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="/template/js/main.js?t=2"></script>
@@ -19,8 +18,9 @@
     <header>
         <nav class="option">
             <ul>
-                <li><a href="/about">About</a></li>
-                <li><a href="/archive">Archive</a></li>
+                <li><a href="/">首页</a></li>
+                <li><a href="/about">关于</a></li>
+                <li><a href="/archive">归档</a></li>
             </ul>
         </nav>
         <!--导航条-->
@@ -38,26 +38,39 @@
     <!--页头结束-->
     {% set posts = get_data(type='post', limit=3, tags=tags) %}
     <div class="main">
-        {% block content %} {% endblock %} {% if request.path == "/archive" or request.path == "/about" %} {% else %}
+        {% block content %} 
+        {% endblock %} 
+        {% if request.path == "/archive" or request.path == "/about" %} 
+        {% else %}
         <div class="turning">
             {% if paginator.has_pre %}
+            <div class="media-pre">
+                <a href="{{ paginator.pre_page_url }}">上一页</a>
+            </div>
             <div class="pre-button">
                 <a href="{{ paginator.pre_page_url }}">
                     <i class="icon-caret-left icon-1x"></i>
                     <span class="pre-page">上一页</span>
                 </a>
             </div>
-            {% endif %} {% if paginator.has_next %}
+            {% endif %} 
+            {% if paginator.has_next %}
+            <div class="media-next">
+                <a href="{{ paginator.next_url }}">下一页</a>
+            </div>
             <div class="next-button">
                 <a href="{{ paginator.next_url}}">
                     <i class="icon-caret-right icon-1x"></i>
                     <span class="next-page">下一页</span>
                 </a>
             </div>
-            {% endif %} {% endif %}
+            {% endif %} 
+        {% endif %}
         </div>
     </div>
     <!--内容-->
     <footer>
+        <p>© <a href="/">{{ site.title }}</a>.Powered by <a href="http://www.farbox.com">FarBox</a>.</p>
+        <p>Theme by 王三思.</p>
     </footer>
     </div>

@@ -1,69 +1,98 @@
 @charset "UTF-8";
+
 /*small reset*/
-body, p, ul,h1,h2, h3, h4, h5, h6, form, blockquote, dl, dd, dt{
-    margin:0;
-    padding:0;
-    font-family: "STHeiti","Hiragino Sans GB",\5FAE\8F6F\96C5\9ED1,tahoma,arial,simsun,\5B8B\4F53;
+
+body,
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+blockquote,
+dl,
+dd,
+dt {
+    margin: 0;
+    padding: 0;
+    font-family: "STHeiti", "Hiragino Sans GB", \5FAE\8F6F\96C5\9ED1, tahoma, arial, simsun, \5B8B\4F53;
 }
-.main, nav, .banner{
+
+.main,
+nav,
+.banner {
     background: white;
 }
-body{
+
+body {
     background: #d0d0d0;
     background-attachment: fixed;
     background-image: url(../img/bgd.png);
 }
 
 a {
-  text-decoration: none;
-  color:#222223; 
+    text-decoration: none;
+    color: #222223;
 }
 
-a:hover { 
-  color:#555; 
+a:hover {
+    color: #555;
 }
 
 h1 {
-    color: #222223; 
+    color: #222223;
 }
 
-p, ul,li {
-  line-height: 1.8;
-  font-size: 14px;
-  list-style: none;
-  color: #222223;
+p,
+ul,
+li {
+    line-height: 1.8;
+    font-size: 14px;
+    list-style: none;
+    color: #222223;
 }
+
 ::selection {
-  background:#656565; 
-  color:#fbfbfb;
+    background: #656565;
+    color: #fbfbfb;
 }
+
 nav ul {
-  list-style: none;
-  margin: 0;
-  float: left;
+    list-style: none;
+    margin: 0;
+    float: left;
 }
-nav ul li{
-  display: inline-block;
-  line-height: 45px;
-  margin: 0 10px 0 30px;
-  font-size: 14px;
+
+nav ul li {
+    display: inline-block;
+    line-height: 45px;
+    margin: 0 10px 0 30px;
+    font-size: 14px;
 }
-nav ul li a{
-  border-bottom:2px solid transparent;
-  padding-bottom: 4px;
-  transition:0.5s;
+
+nav ul li a {
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+    transition: 0.5s;
 }
-nav ul li a:hover{
-  color:#222223;
-  border-bottom:2px solid #555555;
-  transition: 1s
+
+nav ul li a:hover {
+    color: #222223;
+    border-bottom: 2px solid #555555;
+    transition: 1s
 }
-.option{
-  overflow: hidden;
-  width: 55%;
-  margin: 0 auto;
+
+.option {
+    overflow: hidden;
+    width: 55%;
+    margin: 0 auto;
+    border-bottom: 1px solid #f9f9f9;
 }
-.banner{
+
+.banner {
     margin: 0 auto;
     height: 370px;
     width: 55%;
@@ -72,65 +101,84 @@ nav ul li a:hover{
     background-size: 100%;
     background-position: 50% 30%;
 }
-.one {
-   background-position: 50% 11%;
+
+.banner h1 {
+    text-align: center;
+    padding-top: 104px;
+    padding-bottom: 0px;
+    color: white;
 }
-.two {
-  background-position: 50% 22%;
+
+.banner h1 a {
+    color: white;
 }
-.three {
-  background-position: 50% 32%;
-}
-.four {
-  background-position: 50% 43%;
-}
-.five {
-  background-position: 50% 54%;
-}
-.six {
-  background-position: 50% 64%;
-}
-.seven {
-  background-position: 50% 75%;
-}
-.eight {
-  background-position: 50% 86%;
-}
-.nine {
-  background-position: 50% 96%;
+
+.banner h1 span {
+    color: white;
+    font-size: 80px;
+    font-variant: small-caps;
+    font-family: STIXSizeOneSym Regular;
 }
 
 .banner h1 {
-  text-align: center;
-  padding-top: 104px;
-  padding-bottom: 0px;
-  color: white;
+    font-family: Snell Roundhand;
+    font-weight: 100;
+    font-size: 110px;
 }
-.banner h1 a{
-  color: white;
+
+.banner h3 {
+    font-size: 20px;
+    color: #222223;
+    text-align: center;
 }
-.banner h1 span{
-  color: white;
-  font-size: 80px;
-  font-variant: small-caps;
-  font-family: STIXSizeOneSym Regular;
-}
-.banner h1{
-  font-family: Snell Roundhand;
-  font-weight: 100;
-  font-size: 110px;
-}
-.banner h3{
-  font-size: 20px;
-  color: #222223;
-  text-align: center;
-}
-footer{
+
+footer {
     width: 55%;
     margin: 0 auto;
     text-align: center;
     padding: 50px 0 5px 0;
 }
-footer p,footer a{
+
+footer p,
+footer a {
     color: white;
+}
+@media only screen and (max-device-width: 736px) { 
+  body {
+    background: #828d95
+  }
+  .banner,
+  .option {
+    width: 100%;
+  }
+  .banner {
+    display: none;
+  }
+  nav {
+    text-align: center;
+    height: 120px;
+    background: #828d95;
+  }
+  nav ul li {
+    display: inline-block;
+    line-height: 120px;
+    margin: 0 10px 0 30px;
+    font-size: 34px;
+    text-align: center;
+  }
+  
+  nav ul li a{
+    color: white;
+  }
+  
+  nav ul {
+    float:none;
+  }
+  nav a {
+    color:#828d95;
+  }
+  footer {
+    padding:5px 0;
+  }
+
 }
