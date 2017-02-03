@@ -1,6 +1,7 @@
 ;$(function () {
     'use strict'
     var winWidth;
+    
     function mediaTurning(){
         if (window.innerWidth)
         winWidth = window.innerWidth;
@@ -10,6 +11,7 @@
             console.log('phone');
             $(".pre-button").remove();
             $(".next-button").remove();
+            appendText()
         }
         else if(winWidth>980) {
             console.log('web');
@@ -18,15 +20,16 @@
         }
     }
     mediaTurning();
+    
     var prePage = $('.pre-page')
     var nextPage = $('.next-page')
     prePage.hide();
 
     function showPrepage (){
-    	prePage.show(100);
+        prePage.show(100);
     }
     function hidePrepage (){
-    	prePage.hide();
+        prePage.hide();
     }
     function showNextpage (){
         nextPage.show(100);

@@ -14,7 +14,7 @@
               <a class="archive-posts" href="{{ post.url }}">{{ post.title }}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               {% set tags = post.metadata.tags %}
               {% if tags %}
-                {% for tag_name, tag_count in site.tags %} 
+                {% for tag_name in tags %} 
               <a class="archive-tags" href="/tags/{{ tag_name }}">#{{ tag_name }}</a>
                  {% endfor %} 
               {% endif %} 

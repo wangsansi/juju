@@ -12,33 +12,30 @@
         <h1 class="title">
             <a href="{{ post.url }}">{{ post.title }}</a>
         </h1>
+        <h2>{{ post.date.format('%Y-%m-%d') }}</h2>
         <div class="content">
             {% set cover = post.metadata.cover %}
             {% if cover %}
             <div class="img-area">
-                
-                  <img src="{{ cover }}" title="author: {{post.metadata.cover_author}}" />
-                
+                  <a href="{{ post.url }}"><img src="{{ cover }}" title="author: {{post.metadata.cover_author}}" /></a>    
             </div>
             {% endif %}
             <div class="word-area"> 
-                
-                  <p> 
+                  <a href="{{ post.url }}"><p> 
                   {% if post.metadata.intro %}
                     {{ post.metadata.intro }}
                   {% else %}
                     {% set content = post.content|limit(150)  %}
                     {{ content.no_pic }}
                   {% endif %}
-                  </p>
-                
+                  </p></a>
             </div>
             <div class="tag">
                 <div class="label">
                   <ul>
                   {% set tags = post.metadata.tags %}
                   {% if tags %}
-                    {% for tag_name, tag_count in site.tags %}
+                    {% for tag_name in tags %}
                     <li><a href="tags/{{ tag_name }}"><i class="icon-circle icon-1x"></i>&nbsp;{{ tag_name }}</a></li>
                     {% endfor %}
                   {% endif %}
@@ -70,4 +67,4 @@
   })();
   </script>
 {% endfor %}  
-{% endblock %} 
+{% endblock %}

@@ -4,7 +4,7 @@
     width: 75%;
 }
 
-.container p {
+.container p, .container span {
     font-size: 16px;
     margin-bottom: 1.46em;
 }
@@ -15,35 +15,34 @@
 }
 
 .container a:hover {
-    color: rgb(117, 0, 9);
-}
-
-.container span {
-    font-size: 16px;
-    padding-bottom: 1px;
-    border-bottom: 2px solid transparent;
-    transition: 0.5s;
+    color: rgba(84, 126, 166, 0.9);
 }
 
 .container span:hover {
-    padding-bottom: 1px;
-    color: #222223;
-    border-bottom: 2px solid #555555;
-    transition: .5s;
+    color: rgba(84, 126, 166, 0.9);
 }
-@media only screen and (max-device-width: 736px){
-  .container p {
-    line-height: 72px;
-    font-size: 40px;
-    margin-bottom: 20px;
-  }
-  .container a {
-    font-size: 72px;
-    padding-top: 10px;
-    color: rgb(117, 0, 9);
-  }
-  .container span {
-    font-size: 48px;
-    color: rgb(117, 0, 9);
-  }
+
+@media only screen and (max-device-width: 736px) {
+    .archive {
+        padding: 0 9% 14% 9%;
+    }
+    .container {
+        padding-top: 40px;
+        padding-left: 9%;
+        padding-right: 9%;
+        width: initial;
+    }
+    .container p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .container a {
+        font-size: 30px;
+        padding-top: 10px;
+        color: rgba(84, 126, 166, 0.9);
+    }
+    .container span {
+        font-size: 18px;
+        color: rgba(84, 126, 166, 0.9);
+    }
 }
